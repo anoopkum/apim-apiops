@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "path": "logic-app",
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "Azure Logic App.",
+    "isCurrent": true,
+    "displayName": "logic-rax",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://prod-16.uksouth.logic.azure.com/workflows/43c4b6a5ba14415ea3ea8273b83e2a59/triggers",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "displayName": "Gold Tier",
+    "description": "Subscripotion will run x calls based on Y mins",
+    "approvalRequired": false,
+    "state": "published",
+    "subscriptionRequired": true
+  }
+}
