@@ -1,0 +1,15 @@
+<policies>
+	<inbound>
+		<base />
+		<set-backend-service id="apim-generated-policy" backend-id="LogicApp_logic-rax_logic-raxgroup_b2e20b65acfb4c6cb03ce40cac5c3af7" />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>

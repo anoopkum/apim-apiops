@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "description": "logic-rax",
+    "protocol": "http",
+    "resourceId": "https://management.azure.com/subscriptions/b2e20b65-acfb-4c6c-b03c-e40cac5c3af7/resourceGroups/logic-rax_group/providers/Microsoft.Logic/workflows/logic-rax",
+    "url": "https://prod-16.uksouth.logic.azure.com/workflows/43c4b6a5ba14415ea3ea8273b83e2a59/triggers"
+  }
+}

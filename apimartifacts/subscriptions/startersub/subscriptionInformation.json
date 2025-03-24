@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "displayName": "All APIs subscription",
+    "scope": "/subscriptions/b2e20b65-acfb-4c6c-b03c-e40cac5c3af7/resourceGroups/dib-demo-rg/providers/Microsoft.ApiManagement/service/apim-demo-dib/apis",
+    "allowTracing": false,
+    "ownerId": "/subscriptions/b2e20b65-acfb-4c6c-b03c-e40cac5c3af7/resourceGroups/dib-demo-rg/providers/Microsoft.ApiManagement/service/apim-demo-dib/users/67dd36de01234e179cc75f88",
+    "state": "active"
+  }
+}
