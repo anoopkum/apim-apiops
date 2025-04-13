@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "loggerType": "applicationInsights",
+    "credentials": {
+      "instrumentationKey": "{{Logger-Credentials--67e17da201234e179cc76324}}"
+    },
+    "isBuffered": true,
+    "resourceId": "/subscriptions/b2e20b65-acfb-4c6c-b03c-e40cac5c3af7/resourceGroups/rg-anoopkumar-3792_ai/providers/microsoft.insights/components/app-insights-ai"
+  }
+}

@@ -1,98 +1,101 @@
 {
-  "openapi": "3.0.1",
+  "swagger": "2.0",
   "info": {
     "title": "logic-rax",
-    "description": "Azure Logic App.",
-    "version": "1.0"
+    "version": "1.0",
+    "description": "Azure Logic App."
   },
-  "servers": [
+  "host": "apim-demo-dib.azure-api.net",
+  "basePath": "/logic-app",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Ocp-Apim-Subscription-Key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    }
+  },
+  "security": [
     {
-      "url": "https://apim-demo-dib.azure-api.net/logic-app"
+      "apiKeyHeader": []
+    },
+    {
+      "apiKeyQuery": []
     }
   ],
   "paths": {
     "/When_a_HTTP_request_is_received/paths/invoke": {
       "post": {
-        "summary": "When_a_HTTP_request_is_received-invoke",
         "description": "Trigger a run of the logic app.",
         "operationId": "When_a_HTTP_request_is_received-invoke",
-        "requestBody": {
-          "description": "The request body.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/request-When_a_HTTP_request_is_received"
-              },
-              "example": {
-                "input": "string"
-              }
-            }
+        "summary": "When_a_HTTP_request_is_received-invoke",
+        "parameters": [
+          {
+            "name": "request-When_a_HTTP_request_is_received",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/request-When_a_HTTP_request_is_received"
+            },
+            "description": "The request body."
           }
-        },
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "The Logic App Response.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/When_a_HTTP_request_is_receivedPathsInvokePost200ApplicationJsonResponse"
-                }
-              }
+            "schema": {
+              "$ref": "#/definitions/When_a_HTTP_request_is_receivedPathsInvokePost200ApplicationJsonResponse"
+            },
+            "examples": {
+              "application/json": {}
             }
           },
           "500": {
             "description": "The Logic App Response.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/When_a_HTTP_request_is_receivedPathsInvokePost500ApplicationJsonResponse"
-                }
-              }
+            "schema": {
+              "$ref": "#/definitions/When_a_HTTP_request_is_receivedPathsInvokePost500ApplicationJsonResponse"
+            },
+            "examples": {
+              "application/json": {}
             }
           }
         }
       }
     }
   },
-  "components": {
-    "schemas": {
-      "request-When_a_HTTP_request_is_received": {
-        "required": [
-          "input"
-        ],
-        "type": "object",
-        "properties": {
-          "input": {
-            "type": "string"
-          }
+  "definitions": {
+    "request-When_a_HTTP_request_is_received": {
+      "required": [
+        "input"
+      ],
+      "type": "object",
+      "properties": {
+        "input": {
+          "type": "string"
         }
       },
-      "When_a_HTTP_request_is_receivedPathsInvokePost200ApplicationJsonResponse": {
-        "type": "object"
-      },
-      "When_a_HTTP_request_is_receivedPathsInvokePost500ApplicationJsonResponse": {
-        "type": "object"
+      "example": {
+        "input": "string"
       }
     },
-    "securitySchemes": {
-      "apiKeyHeader": {
-        "type": "apiKey",
-        "name": "Ocp-Apim-Subscription-Key",
-        "in": "header"
-      },
-      "apiKeyQuery": {
-        "type": "apiKey",
-        "name": "subscription-key",
-        "in": "query"
-      }
+    "When_a_HTTP_request_is_receivedPathsInvokePost200ApplicationJsonResponse": {
+      "type": "object"
+    },
+    "When_a_HTTP_request_is_receivedPathsInvokePost500ApplicationJsonResponse": {
+      "type": "object"
     }
   },
-  "security": [
-    {
-      "apiKeyHeader": [ ]
-    },
-    {
-      "apiKeyQuery": [ ]
-    }
-  ]
+  "tags": []
 }
