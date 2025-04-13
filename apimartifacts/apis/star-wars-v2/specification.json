@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "title": "Star Wars",
-    "version": "1.0"
+    "version": "v2"
   },
   "host": "apim-demo-dib.azure-api.net",
-  "basePath": "/sw",
+  "basePath": "/sw/v2",
   "schemes": [
     "https"
   ],
@@ -32,19 +32,17 @@
   "paths": {
     "/people/": {
       "get": {
-        "description": "Get People",
         "operationId": "get-people",
         "summary": "Get People",
         "responses": {
           "200": {
-            "description": "null"
+            "description": null
           }
         }
       }
     },
     "/people/{id}/": {
       "get": {
-        "description": "Get People By Id",
         "operationId": "get-people-by-id",
         "summary": "Get People By Id",
         "parameters": [
@@ -57,12 +55,11 @@
         ],
         "responses": {
           "200": {
-            "description": "null"
+            "description": null
           }
         }
       }
     }
   },
-  "definitions": {},
   "tags": []
 }

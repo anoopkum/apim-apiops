@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "path": "apim-openai",
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "Azure OpenAI APIs for completions and search",
+    "isCurrent": true,
+    "displayName": "apim-openai",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://openai-swedan.openai.azure.com/openai",
+    "subscriptionKeyParameterNames": {
+      "header": "api-key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

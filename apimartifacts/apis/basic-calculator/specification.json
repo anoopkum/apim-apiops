@@ -1,197 +1,181 @@
 {
-  "openapi": "3.0.1",
+  "swagger": "2.0",
   "info": {
     "title": "Basic Calculator",
-    "description": "Arithmetics is just a call away!",
-    "version": "1.0"
+    "version": "1.0",
+    "description": "Arithmetics is just a call away!"
   },
-  "servers": [
+  "host": "apim-demo-dib.azure-api.net",
+  "basePath": "/calc",
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Ocp-Apim-Subscription-Key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    }
+  },
+  "security": [
     {
-      "url": "http://apim-demo-dib.azure-api.net/calc"
+      "apiKeyHeader": []
+    },
+    {
+      "apiKeyQuery": []
     }
   ],
   "paths": {
     "/add": {
       "get": {
-        "summary": "Add two integers",
         "description": "Produces a sum of two numbers.",
         "operationId": "67dabad2217d2007f4e99b32",
+        "summary": "Add two integers",
         "parameters": [
           {
             "name": "a",
             "in": "query",
             "description": "First operand. Default value is <code>51</code>.",
             "required": true,
-            "schema": {
-              "enum": [
-                ""
-              ],
-              "type": "string",
-              "default": ""
-            }
+            "type": "string",
+            "default": "",
+            "enum": [
+              ""
+            ]
           },
           {
             "name": "b",
             "in": "query",
             "description": "Second operand. Default value is <code>49</code>.",
             "required": true,
-            "schema": {
-              "enum": [
-                ""
-              ],
-              "type": "string",
-              "default": ""
-            }
+            "type": "string",
+            "default": "",
+            "enum": [
+              ""
+            ]
           }
         ],
         "responses": {
           "200": {
-            "description": null
+            "description": "null"
           }
         }
       }
     },
     "/sub": {
       "get": {
-        "summary": "Subtract two integers",
         "description": "Produces a difference between two numbers.",
         "operationId": "67dabad2217d2007f4e99b33",
+        "summary": "Subtract two integers",
         "parameters": [
           {
             "name": "a",
             "in": "query",
             "description": "First operand. Default value is <code>51</code>.",
             "required": true,
-            "schema": {
-              "enum": [
-                ""
-              ],
-              "type": "string",
-              "default": ""
-            }
+            "type": "string",
+            "default": "",
+            "enum": [
+              ""
+            ]
           },
           {
             "name": "b",
             "in": "query",
             "description": "Second operand. Default value is <code>49</code>.",
             "required": true,
-            "schema": {
-              "enum": [
-                ""
-              ],
-              "type": "string",
-              "default": ""
-            }
+            "type": "string",
+            "default": "",
+            "enum": [
+              ""
+            ]
           }
         ],
         "responses": {
           "200": {
-            "description": null
+            "description": "null"
           }
         }
       }
     },
     "/mul": {
       "get": {
-        "summary": "Multiply two integers",
         "description": "Produces a product of two numbers.",
         "operationId": "67dabad2217d2007f4e99b34",
+        "summary": "Multiply two integers",
         "parameters": [
           {
             "name": "a",
             "in": "query",
             "description": "First operand. Default value is <code>51</code>.",
             "required": true,
-            "schema": {
-              "enum": [
-                ""
-              ],
-              "type": "string",
-              "default": ""
-            }
+            "type": "string",
+            "default": "",
+            "enum": [
+              ""
+            ]
           },
           {
             "name": "b",
             "in": "query",
             "description": "Second operand. Default value is <code>49</code>.",
             "required": true,
-            "schema": {
-              "enum": [
-                ""
-              ],
-              "type": "string",
-              "default": ""
-            }
+            "type": "string",
+            "default": "",
+            "enum": [
+              ""
+            ]
           }
         ],
         "responses": {
           "200": {
-            "description": null
+            "description": "null"
           }
         }
       }
     },
     "/div": {
       "get": {
-        "summary": "Divide two integers",
         "description": "Produces a quotient of two numbers.",
         "operationId": "67dabad2217d2007f4e99b35",
+        "summary": "Divide two integers",
         "parameters": [
           {
             "name": "a",
             "in": "query",
             "description": "First operand. Default value is <code>51</code>.",
             "required": true,
-            "schema": {
-              "enum": [
-                ""
-              ],
-              "type": "string",
-              "default": ""
-            }
+            "type": "string",
+            "default": "",
+            "enum": [
+              ""
+            ]
           },
           {
             "name": "b",
             "in": "query",
             "description": "Second operand. Default value is <code>49</code>.",
             "required": true,
-            "schema": {
-              "enum": [
-                ""
-              ],
-              "type": "string",
-              "default": ""
-            }
+            "type": "string",
+            "default": "",
+            "enum": [
+              ""
+            ]
           }
         ],
         "responses": {
           "200": {
-            "description": null
+            "description": "null"
           }
         }
       }
     }
   },
-  "components": {
-    "securitySchemes": {
-      "apiKeyHeader": {
-        "type": "apiKey",
-        "name": "Ocp-Apim-Subscription-Key",
-        "in": "header"
-      },
-      "apiKeyQuery": {
-        "type": "apiKey",
-        "name": "subscription-key",
-        "in": "query"
-      }
-    }
-  },
-  "security": [
-    {
-      "apiKeyHeader": [ ]
-    },
-    {
-      "apiKeyQuery": [ ]
-    }
-  ]
+  "definitions": {},
+  "tags": []
 }

@@ -1,0 +1,7 @@
+{
+  "properties": {
+    "credentials": {},
+    "protocol": "http",
+    "url": "https://openai-swedan.openai.azure.com/openai"
+  }
+}
