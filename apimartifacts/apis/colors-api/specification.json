@@ -49,18 +49,15 @@
           "Colors"
         ],
         "produces": [
-          "text/plain",
           "application/json",
-          "text/json"
+          "text/json",
+          "text/plain"
         ],
         "responses": {
           "200": {
             "description": "Success - returns list of colors",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ColorsItem"
-              }
+              "$ref": "#/definitions/ColorsItemArray"
             },
             "examples": {
               "application/json": [
@@ -90,20 +87,10 @@
         ],
         "parameters": [
           {
-            "name": "colorsPostRequest",
+            "name": "colorsItemArray-1",
             "in": "body",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ColorsItem"
-              },
-              "example": [
-                {
-                  "id": 0,
-                  "name": "string",
-                  "data": "string"
-                }
-              ]
+              "$ref": "#/definitions/ColorsItemArray-1"
             },
             "description": "Colors to update"
           }
@@ -114,9 +101,9 @@
           "application/*+json"
         ],
         "produces": [
-          "text/plain",
           "application/json",
-          "text/json"
+          "text/json",
+          "text/plain"
         ],
         "responses": {
           "201": {
@@ -169,9 +156,9 @@
           "Colors"
         ],
         "produces": [
-          "text/plain",
           "application/json",
-          "text/json"
+          "text/json",
+          "text/plain"
         ],
         "responses": {
           "204": {
@@ -207,16 +194,16 @@
           {
             "name": "colorId",
             "in": "path",
-            "description": "Format - int32. Id of Color to return",
+            "description": "Format - int32. Format - int32. Id of Color to return",
             "required": true,
             "type": "integer",
             "format": "int32"
           }
         ],
         "produces": [
-          "text/plain",
           "application/json",
-          "text/json"
+          "text/json",
+          "text/plain"
         ],
         "responses": {
           "200": {
@@ -294,7 +281,7 @@
           {
             "name": "colorId",
             "in": "path",
-            "description": "Format - int32. Id of Color to update",
+            "description": "Format - int32. Format - int32. Id of Color to update",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -314,9 +301,9 @@
           "application/*+json"
         ],
         "produces": [
-          "text/plain",
           "application/json",
-          "text/json"
+          "text/json",
+          "text/plain"
         ],
         "responses": {
           "201": {
@@ -372,16 +359,16 @@
           {
             "name": "colorId",
             "in": "path",
-            "description": "Format - int32. Id of Color to delete",
+            "description": "Format - int32. Format - int32. Id of Color to delete",
             "required": true,
             "type": "integer",
             "format": "int32"
           }
         ],
         "produces": [
-          "text/plain",
           "application/json",
-          "text/json"
+          "text/json",
+          "text/plain"
         ],
         "responses": {
           "204": {
@@ -445,9 +432,9 @@
           }
         ],
         "produces": [
-          "text/plain",
           "application/json",
-          "text/json"
+          "text/json",
+          "text/plain"
         ],
         "responses": {
           "200": {
@@ -502,9 +489,9 @@
           "Colors"
         ],
         "produces": [
-          "text/plain",
           "application/json",
-          "text/json"
+          "text/json",
+          "text/plain"
         ],
         "responses": {
           "200": {
@@ -559,9 +546,9 @@
           "Colors"
         ],
         "produces": [
-          "text/plain",
           "application/json",
-          "text/json"
+          "text/json",
+          "text/plain"
         ],
         "responses": {
           "201": {
@@ -629,6 +616,25 @@
         }
       },
       "additionalProperties": {}
+    },
+    "ColorsItemArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ColorsItem"
+      }
+    },
+    "ColorsItemArray-1": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ColorsItem"
+      },
+      "example": [
+        {
+          "id": 0,
+          "name": "string",
+          "data": "string"
+        }
+      ]
     }
   },
   "tags": []

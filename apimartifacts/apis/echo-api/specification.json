@@ -79,12 +79,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "example": {
-                "vehicleType": "train",
-                "maxSpeed": 125,
-                "avgSpeed": 90,
-                "speedUnit": "mph"
-              }
+              "$ref": "#/definitions/Body"
             }
           }
         ],
@@ -150,6 +145,15 @@
       }
     }
   },
-  "definitions": {},
+  "definitions": {
+    "Body": {
+      "example": {
+        "vehicleType": "train",
+        "maxSpeed": 125,
+        "avgSpeed": 90,
+        "speedUnit": "mph"
+      }
+    }
+  },
   "tags": []
 }
