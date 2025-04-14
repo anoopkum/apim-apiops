@@ -1,0 +1,42 @@
+openapi: 3.0.1
+info:
+  title: Star Wars
+  version: '1.0'
+servers:
+  - url: https://apim-demo-dib.azure-api.net/sw
+paths:
+  /people/:
+    get:
+      summary: Get People
+      description: Get People
+      operationId: get-people
+      responses:
+        '200':
+          description: 'null'
+  '/people/{id}/':
+    get:
+      summary: Get People By Id
+      description: Get People By Id
+      operationId: get-people-by-id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'null'
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]
