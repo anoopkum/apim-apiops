@@ -8,7 +8,7 @@
 	<!-- Throttle, authorize, validate, cache, or transform the requests -->
 	<inbound>
 		<base />
-		<rate-limit-by-key calls="20" renewal-period="60" counter-key="@(context.Subscription?.Key ?? "anonymous")" />
+		<cache-lookup vary-by-developer="false" vary-by-developer-groups="false" allow-private-response-caching="false" must-revalidate="false" downstream-caching-type="none" />
 	</inbound>
 	<!-- Control if and how the requests are forwarded to services  -->
 	<backend>
@@ -17,6 +17,7 @@
 	<!-- Customize the responses -->
 	<outbound>
 		<base />
+		<cache-store duration="10" />
 	</outbound>
 	<!-- Handle exceptions and customize error responses  -->
 	<on-error>
