@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "displayName": "dibdemo",
+    "secret": false,
+    "tags": [],
+    "value": "api://3ce9dbfb-4e0a-4858-a0f9-5ae72bfecf1a"
+  }
+}
